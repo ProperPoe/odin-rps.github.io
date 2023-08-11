@@ -61,6 +61,12 @@ body {
     font-size: 75px;
 }
 
+.score {
+    display: flex;
+    gap: 280px;
+    font-size: 75px;
+}
+
 
 
 
