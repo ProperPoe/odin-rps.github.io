@@ -1,13 +1,14 @@
 const theForm = document.getElementById("form");
 const theInput = document.querySelector("input");
-const btn = document.getElementById("btn")
-let player = document.getElementById("pChoice");
-let computer = document.getElementById("cChoice");
+const rockBtn = document.getElementById("rockBtn")
+const paperBtn = document.getElementById("paperBtn")
+const scizBtn = document.getElementById("scizBtn")
+const player = document.getElementById("pChoice");
+const computer = document.getElementById("cChoice");
 const pScore = document.getElementById("pScore");
 const cScore = document.getElementById("cScore");
 const result = document.getElementById("result");
 
-let clickStop = 0;
 let playScore = 0;
 let compScore = 0;
 
@@ -21,28 +22,14 @@ const computerChoice = (ind) =>{
     return rpsArray[ind]
 }  
 
-theForm.addEventListener("submit", (e)=> {
-    e.preventDefault()
-    if(gameActive){
-        game()
-    }
-    
-})  
 
-const game = () => {
-        
-    //e.preventDefault();
-    
+const game = (btnValue) => {
     const ind = Math.floor(Math.random() * 3);
-    let val = theInput.value;
-    let hmm = computerChoice(ind);
-    let gameOver = false;
-    player.innerHTML = val
-    computer.innerHTML = hmm
-   
-    //player.appendChildChild(playerChoice);
-    //computer.appendChild(compChoice);
-    //while(playScore < 5 || compScore < 5){  
+    let val = btnValue;
+    let compVal = computerChoice(ind);
+    player.innerHTML = val;
+    computer.innerHTML = compVal;
+
     if(val){
         if(val === "Rock" && computerChoice(ind) === "Scissors"){
             playScore += 1
@@ -74,13 +61,26 @@ const game = () => {
             gameActive = false
         }
     }  
-    
-
-    theInput.value = "";
 }
     
-            
-        //}
+rockBtn.addEventListener("click", ()=> {
+    if(gameActive){
+        game(rockBtn.value)
+    }
+    
+})  
+paperBtn.addEventListener("click", ()=> {
+    if(gameActive){
+        game(paperBtn.value)
+    }
+    
+})  
+scizBtn.addEventListener("click", ()=> {
+    if(gameActive){
+        game(scizBtn.value)
+    }
+    
+})  
             
           
         
