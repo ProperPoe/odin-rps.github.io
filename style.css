@@ -25,6 +25,7 @@ body {
     align-items: center;
 }
 .form-container .btn-container button{
+    background-color: rgb(133, 133, 133);
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -39,6 +40,7 @@ body {
 }
 
 #resetBtn {
+    background-color: rgb(133, 133, 133);
     border: none;
     border-radius: 15px;
     cursor: pointer;
