@@ -3,6 +3,7 @@ const theInput = document.querySelector("input");
 const rockBtn = document.getElementById("rockBtn")
 const paperBtn = document.getElementById("paperBtn")
 const scizBtn = document.getElementById("scizBtn")
+const reset = document.getElementById("resetBtn")
 const player = document.getElementById("pChoice");
 const computer = document.getElementById("cChoice");
 const pScore = document.getElementById("pScore");
@@ -81,6 +82,17 @@ scizBtn.addEventListener("click", ()=> {
     }
     
 })  
+
+reset.addEventListener("click", () => {
+    player.innerHTML = "";
+    computer.innerHTML = "";
+    pScore.innerHTML = "0";
+    cScore.innerHTML = "0";
+    result.innerHTML= "";
+    playScore = 0;
+    compScore = 0;
+    gameActive = true;
+})
             
           
         
