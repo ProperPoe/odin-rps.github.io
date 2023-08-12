@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="form-container">
-        <button id="rockBtn" value="Rock">Rock</button>
-        <button id="paperBtn" value="Paper">Paper</button>
-        <button id="scizBtn" value="Scissors">Scissors</button>
+        <div class="btn-container">
+            <button id="rockBtn" value="Rock">Rock</button>
+            <button id="paperBtn" value="Paper">Paper</button>
+            <button id="scizBtn" value="Scissors">Scissors</button>
+        </div>
         <div class="choiceContainer">
             <div class="playerChoice">
                 <span>Player chose</span>
@@ -25,7 +27,6 @@
                 
                 </div>
             </div>
-            <button id="resetBtn">Reset</button>
         </div> 
         <div class="score">
             <div class="playerScore" id="pScore">
@@ -34,6 +35,9 @@
             <div class="compScore" id="cScore">
                 0
             </div>
+        </div>
+        <div class="reset">
+            <button id="resetBtn">Reset</button>
         </div>
         <div class="result" id="result">
             
